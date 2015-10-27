@@ -1,6 +1,8 @@
 package com.example.guest.twitter_clone.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,8 @@ import com.example.guest.twitter_clone.R;
 import com.example.guest.twitter_clone.models.Tweet;
 
 import java.util.ArrayList;
+
+import static android.support.v4.app.ActivityCompat.startActivity;
 
 /**
  * Created by Guest on 10/27/15.

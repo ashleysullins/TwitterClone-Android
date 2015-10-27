@@ -48,10 +48,14 @@ public class MainActivity extends ListActivity {
             @Override
             public void onClick(View v) {
                 String tweetContent = mTweetText.getText().toString();
+                if(tweetContent.length() < 140 ) {
                 Tweet tweet = new Tweet(tweetContent, mUser);
-                tweet.save();
-                mTweets.add(tweet);
-                mAdapter.notifyDataSetChanged();
+                    tweet.save();
+                    mTweets.add(tweet);
+                    mAdapter.notifyDataSetChanged();
+                } else {
+                    Toast.makeText(MainActivity.this, "Tweets must be 140 characters or less ", Toast.LENGTH_LONG).show();
+                };
 
                 // Clears input and hides keyboard
                 mTweetText.setText("");
